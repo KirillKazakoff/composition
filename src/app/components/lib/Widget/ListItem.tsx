@@ -1,6 +1,6 @@
-import { WiAlien as Icon } from '@react-icons/all-files/wi/WiAlien';
 import React from 'react';
 import { IconBaseProps } from '@react-icons/all-files/lib';
+import { nanoid } from 'nanoid';
 import { Flex, FlexProps } from '../../primitives/Flex';
 import Link from '../../primitives/Link';
 

@@ -26,7 +26,7 @@ export default function Search(props: FlexProps) {
             </Button>
             <Box fontSize='20px'>
                 <Text>Найдется все, например: </Text>
-                <Text color='hint'>фаза луны сегодня</Text>
+                <Text color='hint'>фаза пожилой луны сегодня</Text>
             </Box>
         </Flex>
     );

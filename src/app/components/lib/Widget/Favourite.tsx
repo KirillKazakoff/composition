@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 import favouriteData from '../../../data/favouriteData';
 import { Box } from '../../primitives/Box';
 import Text from '../../primitives/Text';
@@ -10,7 +11,10 @@ export default function Favourite({ icon, ...props }: ListItemProps) {
     const content = favouriteData.map((item) => {
         const { title, description, href } = item;
         return (
-            <ListItem href={href} icon={icon}>
+            <ListItem
+                href={href} icon={icon}
+                key={nanoid()}
+            >
                 <Box>
                     <Text fontWeight='bold'>{title}</Text>
                     {' '}

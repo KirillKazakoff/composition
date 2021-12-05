@@ -15,6 +15,7 @@ const Info: React.FC<InfoProps> = ({ contentData, ...props }) => {
         <Flex
             {...props} flexDirection='column'
             border='primary' p='5px'
+            gap='10px'
         >
             <Image
                 width='30%' src={img}

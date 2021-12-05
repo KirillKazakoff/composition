@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import broadcastData from '../../../data/broadcastData';
 import Text from '../../primitives/Text';
@@ -9,7 +10,10 @@ export default function Broadcast({ icon, ...props }: ListItemProps) {
     const content = broadcastData.map((item) => {
         const { chanel, title, href } = item;
         return (
-            <ListItem icon={icon} href={href}>
+            <ListItem
+                icon={icon} href={href}
+                key={nanoid()}
+            >
                 <Text fontWeight='bold'>{title}</Text>
                 <Text color='hint'>{chanel}</Text>
             </ListItem>

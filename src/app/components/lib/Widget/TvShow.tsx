@@ -1,6 +1,7 @@
 /* eslint-disable object-curly-newline */
 import React from 'react';
 import { FiPlay } from '@react-icons/all-files/fi/FiPlay';
+import { nanoid } from 'nanoid';
 import tvShowData from '../../../data/tvShowData';
 import Widget from './Widget';
 import { WidgetHeading } from './WidgetHeading';
@@ -15,7 +16,7 @@ export default function TvShow({ icon, ...props }: ListItemProps) {
         return (
             <ListItem
                 gap='10px' href={href}
-                icon={icon}
+                icon={icon} key={nanoid()}
             >
                 <Text>{time}</Text>
                 <Text>{title}</Text>
