@@ -9,7 +9,7 @@ interface InfoProps extends FlexProps {
     contentData: InfoDataType;
 }
 
-const Info: React.FC<InfoProps> = ({ contentData, ...props }) => {
+const Info = ({ contentData, ...props }: InfoProps) => {
     const { img, title, text } = contentData;
     return (
         <Flex

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WeatherData from '../../../data/WeatherData';
+import weatherData from '../../../data/weatherData';
 import { Flex } from '../../primitives/Flex';
 import Widget from './Widget';
 import Text from '../../primitives/Text';
@@ -13,7 +13,7 @@ export default function WeatherWidget({ icon, ...props }: ListItemProps) {
         <Widget {...props}>
             <WidgetHeading heading='Погода' />
             <ListItem icon={icon}>
-                <Text fontSize={5}>{WeatherData.morning}</Text>
+                <Text fontSize={5}>{weatherData.morning}</Text>
                 <Flex
                     gap='5px' flexDirection='column'
                     alignSelf='start'
@@ -21,12 +21,12 @@ export default function WeatherWidget({ icon, ...props }: ListItemProps) {
                     <Text>
                         Утром
                         {' '}
-                        {WeatherData.morning}
+                        {weatherData.morning}
                     </Text>
                     <Text>
                         днем
                         {' '}
-                        {WeatherData.day}
+                        {weatherData.day}
                     </Text>
                 </Flex>
             </ListItem>
