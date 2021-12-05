@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <Flex
             mt={4} pb={4}
-            flexWrap='wrap' gap='10%'
+            flexWrap='wrap' gap='3%'
             rowGap='30px'
         >
             <WeatherWidget icon={<WiAlien size='50px' />} />

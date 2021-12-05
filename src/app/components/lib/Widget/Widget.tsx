@@ -1,19 +1,20 @@
 import React from 'react';
 import { Flex, FlexProps } from '../../primitives/Flex';
-import { HeadingProps, WidgetHeading } from './WidgetHeading';
 
 type WidgetProps = {
     children: React.ReactNode;
-} & FlexProps &
-HeadingProps;
+} & FlexProps;
 
-export default function Widget({ heading, children, ...props }: WidgetProps) {
+export default function Widget({ children, ...props }: WidgetProps) {
     return (
         <Flex
-            flexDirection='column' gap='10px'
+            flexDirection='column'
+            gap='10px'
+            width='31%'
+            p='1%'
+            border='primary'
             {...props}
         >
-            <WidgetHeading heading={heading} />
             {children}
         </Flex>
     );

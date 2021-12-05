@@ -3,6 +3,7 @@ import broadcastData from '../../../data/broadcastData';
 import Text from '../../primitives/Text';
 import { ListItem, ListItemProps } from './ListItem';
 import Widget from './Widget';
+import { WidgetHeading } from './WidgetHeading';
 
 export default function Broadcast({ icon, ...props }: ListItemProps) {
     const content = broadcastData.map((item) => {
@@ -15,7 +16,8 @@ export default function Broadcast({ icon, ...props }: ListItemProps) {
         );
     });
     return (
-        <Widget {...props} heading={{ main: 'Эфир' }}>
+        <Widget {...props}>
+            <WidgetHeading heading='Эфир' />
             {content}
         </Widget>
     );

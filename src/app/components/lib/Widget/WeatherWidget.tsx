@@ -6,10 +6,12 @@ import Widget from './Widget';
 import Text from '../../primitives/Text';
 
 import { ListItem, ListItemProps } from './ListItem';
+import { WidgetHeading } from './WidgetHeading';
 
 export default function WeatherWidget({ icon, ...props }: ListItemProps) {
     return (
-        <Widget heading={{ main: 'Погода' }} {...props}>
+        <Widget {...props}>
+            <WidgetHeading heading='Погода' />
             <ListItem icon={icon}>
                 <Text fontSize={5}>{WeatherData.morning}</Text>
                 <Flex

@@ -8,9 +8,14 @@ export type ListItemProps = {
     icon?: IconBaseProps;
 } & FlexProps;
 
-export function ListItem({ icon, children, href }: ListItemProps) {
+export function ListItem({
+    icon, children, href, ...props
+}: ListItemProps) {
     const content = (
-        <Flex gap='15px' alignItems='center'>
+        <Flex
+            gap='15px' alignItems='center'
+            {...props}
+        >
             {icon || null}
             {children}
         </Flex>
